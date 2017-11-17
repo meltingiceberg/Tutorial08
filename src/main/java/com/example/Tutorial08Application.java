@@ -4,11 +4,11 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ApapTutorial04Application
+public class Tutorial08Application
 {
 
     public static void main (String[] args)
     {
-        SpringApplication.run (ApapTutorial04Application.class, args);
+        SpringApplication.run (Tutorial08Application.class, args);
     }
 }
