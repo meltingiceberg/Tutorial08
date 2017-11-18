@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.model.CourseModel;
 import com.example.model.StudentModel;
 import com.example.service.StudentService;
 
@@ -88,18 +87,6 @@ public class StudentController
         model.addAttribute("coursemsg", "Kuliah yang diambil");
 
         return "viewall";
-    }
-    
-    @RequestMapping("/course/view/{id}")
-    public String viewCourse (Model model, @PathVariable(value = "id") String id) {
-    	CourseModel course = studentDAO.selectCourse(id);
-    	if (course != null) {
-    		model.addAttribute("course", course);
-    		return "view-course";
-    	}
-    	
-    	model.addAttribute("id", id);
-    	return "not-found-course";
     }
 
     @RequestMapping("/student/delete/{npm}")
